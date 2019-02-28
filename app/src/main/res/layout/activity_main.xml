@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="228dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/enterAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="228dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="60dp"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:text="@string/enterPeople"
+        app:layout_constraintLeft_toLeftOf="@id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="28dp" tools:targetApi="o"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/billAmount"
+        app:layout_constraintLeft_toLeftOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="42dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        app:layout_constraintLeft_toLeftOf="@+id/editText"
+        android:text="@string/peopleSplit"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="38dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="89dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="1in"
+        android:layout_marginStart="75dp"
+        app:layout_constraintLeft_toLeftOf="@id/editText"
+        android:text="@string/otherAmount"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        tools:layout_editor_absoluteX="296dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupID"
+        android:layout_width="331dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView3">
+
+        <!--17dp-->
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:button="@android:drawable/radiobutton_off_background"
+            android:checked="false"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/ten_percent"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="@id/editText"
+            tools:layout_editor_absoluteX="38dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:button="@android:drawable/radiobutton_off_background"
+            android:checked="false"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/fifteen_percent"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="@id/radioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:button="@android:drawable/radiobutton_off_background"
+            android:checked="false"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:cursorVisible="true"
+            android:enabled="true"
+            android:focusable="true"
+            android:text="@string/twenty_percent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+
+            android:baselineAligned="false"
+            android:button="@android:drawable/radiobutton_off_background"
+            android:checked="false"
+            android:clickable="true"
+            android:focusable="true"
+            android:saveEnabled="true"
+            android:text="@string/other"
+            android:visibility="visible" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="420dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/reset"
+        app:layout_constraintStart_toEndOf="@+id/radioGroupID"
+        tools:layout_editor_absoluteY="315dp" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        tools:layout_editor_absoluteX="113dp"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        app:layout_constraintLeft_toLeftOf="@id/radioGroupID"
+        />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        app:layout_constraintLeft_toRightOf="@id/reset"
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="26dp" />
+
+</android.support.constraint.ConstraintLayout>

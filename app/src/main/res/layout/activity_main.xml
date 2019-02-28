@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/amount"
         android:layout_width="228dp"
         android:layout_height="42dp"
         android:layout_marginStart="45dp"
@@ -22,14 +22,14 @@
         tools:targetApi="o" />
 
     <EditText
-        android:id="@+id/textView"
+        android:id="@+id/number"
         android:layout_width="228dp"
         android:layout_height="44dp"
         android:layout_marginTop="60dp"
         android:importantForAutofill="no"
         android:inputType="number"
         android:text="@string/enterPeople"
-        app:layout_constraintLeft_toLeftOf="@id/editText"
+        app:layout_constraintLeft_toLeftOf="@id/amount"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:layout_editor_absoluteX="28dp" tools:targetApi="o"/>
 
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:text="@string/billAmount"
-        app:layout_constraintLeft_toLeftOf="@+id/editText"
+        app:layout_constraintLeft_toLeftOf="@+id/amount"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="42dp" />
 
@@ -48,9 +48,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
-        app:layout_constraintLeft_toLeftOf="@+id/editText"
+        app:layout_constraintLeft_toLeftOf="@+id/amount"
         android:text="@string/peopleSplit"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/number"
         tools:layout_editor_absoluteX="38dp" />
 
     <TextView
@@ -59,9 +59,9 @@
         android:layout_height="19dp"
         android:layout_marginTop="1in"
         android:layout_marginStart="75dp"
-        app:layout_constraintLeft_toLeftOf="@id/editText"
+        app:layout_constraintLeft_toLeftOf="@id/amount"
         android:text="@string/otherAmount"
-        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/number"
         tools:layout_editor_absoluteX="296dp" />
 
     <RadioGroup
@@ -90,7 +90,7 @@
             android:focusable="true"
             android:text="@string/ten_percent"
             android:visibility="visible"
-            app:layout_constraintLeft_toLeftOf="@id/editText"
+            app:layout_constraintLeft_toLeftOf="@id/amount"
             tools:layout_editor_absoluteX="38dp" />
 
         <RadioButton
@@ -140,7 +140,7 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/otherNum"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -148,10 +148,9 @@
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@id/reset"
         app:layout_constraintStart_toEndOf="@+id/radioGroupID"
-        tools:layout_editor_absoluteY="315dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/reset"
